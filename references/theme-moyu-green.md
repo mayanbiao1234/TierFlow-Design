@@ -4,6 +4,12 @@
 >
 > **设计风格**：绿色杂志风，卡片丰富、信息密度高。emerald 主色 + 黄色高亮点睛、杂志快讯封面、横向滚动目录、标签化章节。适合教程、测评、清单、工具盘点类文章。
 >
+> **⭐ 定版装配（推荐默认，长文深度分析实测打磨）**：
+> 1. 封面用「无框居中版」（组件 2 第三种变体）——**不要**外框卡片、阴影、底部绿色渐变品牌条；标题颜色/字体/字号不变，纯文本居中
+> 2. **不加目录**（组件 3 默认跳过；用户点名要目录才生成）
+> 3. **内容区不加 20px 侧边距**：章节标题 section 用 `padding:0`、前言/参考来源/签名等包层 section 一律 `padding:0;margin:0 0 …`，引言卡/三连卡等满宽卡片的 margin 左右归零（`margin:0 0 28px`）。组件库代码示例里的 `0 20px` 仅用于独立浏览器预览的观感，粘贴进公众号时**必须清零**——公众号自带页面留白，再叠 20px 内容区就明显变窄。卡片自身的内 padding（如 `padding:14px 16px`）保留不动
+> 4. 其余照常：章节标题 4、正文 5、行内样式 6、绿表头表格 11f、oneliner-card 9b、引注绿色加粗挂句尾、footer-cta 13a
+>
 > **公众号平台限制须知**：
 > - ❌ 不支持 `<style>`/`<script>`、CSS class/id、`position:fixed/absolute`、`float`、`@media`/`@keyframes`、`display:grid`
 > - ✅ 支持内联 `style`、`display:flex`（有限）、`linear-gradient`、`border-radius`、`box-shadow`、`<section>/<p>/<span>/<strong>/<img>` 等基础标签
@@ -168,9 +174,34 @@
 - `{{副标题关键词}}` → 简短关键词，用 `·` 分隔
 - `{{底部左侧文字}}` → 产品/品牌名；`{{标签1/2}}` → 底部小标签
 
+**⭐ 无框居中版（用户默认，2026-09-21 确认）**——无外框、无阴影、无渐变品牌条，纯文本居中，标题颜色/字体/字号与带框版完全一致：
+
+```html
+<section style="margin:0 0 32px;padding:8px 20px 0;text-align:center;">
+  <p style="font-size:11px;font-weight:700;letter-spacing:3px;color:#059669;margin:0 0 22px;">
+    <span leaf="">{{顶部标签 · 日期，合并为一行}}</span>
+  </p>
+  <p style="font-size:15px;color:#D1D5DB;margin:0 0 6px;text-decoration:line-through;letter-spacing:0.5px;">
+    <span leaf="">{{划线旧认知}}</span>
+  </p>
+  <p style="font-size:24px;font-weight:900;color:#111827;margin:0;line-height:1.3;letter-spacing:-2px;">
+    <span leaf="">{{主标题行1}}</span>
+    <span style="color:#059669;"><span leaf="">{{绿色高亮词}}</span></span>
+  </p>
+  <p style="font-size:24px;font-weight:900;color:#059669;margin:0 0 14px;line-height:1.3;letter-spacing:-2px;">
+    <span leaf="">{{主标题行2}}</span>
+  </p>
+  <p style="font-size:13px;color:#9CA3AF;margin:0;line-height:1.7;letter-spacing:0.5px;">
+    <span leaf="">{{副标题关键词}}</span>
+  </p>
+</section>
+```
+
 ---
 
 ## 组件 3 目录 toc-scroll（横向滚动目录）
+
+> ⚠️ **默认不生成目录**（无目录版更简洁）。仅当用户点名"加个目录/全文导航"时才使用本组件。
 
 2 个及以上章节时生成。第一个卡片绿色高亮，最后一个固定为"写在最后"（PART ///）。
 
@@ -842,9 +873,9 @@
 ```html
 <section style="max-width:677px;margin:0 auto;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;color:#374151;line-height:1.75;letter-spacing:0.5px;overflow-x:hidden;">
 
-  <!-- 1. 封面（组件2 cover-breaking，有图/无图二选一） -->
+  <!-- 1. 封面（组件2 无框居中版=用户默认；带框版仅用户点名时用） -->
 
-  <!-- 2. 目录（组件3 toc-scroll，2+ 章节时生成，紧跟封面之下） -->
+  <!-- 2. 目录：默认不生成（见组件3警示）；用户点名才加 -->
 
   <!-- 3. 开头引言（组件9b oneliner-card，文章有开头金句时） -->
 
@@ -857,6 +888,8 @@
 
   <!-- 7. 结语章（组件4 变体：编号 ///，PART 改 LAST，章名"写在最后"） -->
 
+  <!-- 7.5 可选：文末产品节（组件4 变体：编号用 ⚡，PART 改 PRODUCT；叙事"文章论点→产品实践"，可带 11f 指标表；用户点名"加产品介绍"时用） -->
+
   <!-- 8. 互动三连（组件13a footer-cta，前面放固定签名段落） -->
 
   <!-- 9. 品牌尾图（组件13b，有素材才加） -->
@@ -864,7 +897,7 @@
 </section>
 ```
 
-**骨架顺序铁律**：目录 toc-scroll **必须紧跟封面之下**，在开头引言和前言正文之前——读者先看全文地图再进入内容。
+**骨架顺序铁律**：默认装配下封面之后**直接进入前言正文**，不插目录；用户点名要目录时，toc-scroll 才紧跟封面之下。
 
 ---
 

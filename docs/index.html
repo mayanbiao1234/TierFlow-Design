@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>gzh-design · 公众号排版技能（定制增强版）</title>
+<meta name="description" content="把 Markdown 一键排成可直接粘贴进微信公众号编辑器的精致 HTML —— 7 套精选主题 + 主题生成器 + 双关卡校验，AI Agent Skill，AGPL-3.0 开源。">
+<style>
+  :root{
+    --ink:#111827; --body:#374151; --muted:#6B7280; --faint:#9CA3AF;
+    --green:#059669; --green-soft:#ECFDF5; --green-line:#A7F3D0;
+    --line:#E5E7EB; --bg:#FFFFFF; --panel:#F9FAFB;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--body);background:var(--bg);line-height:1.75;letter-spacing:.2px;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  /* hero */
+  header{padding:72px 0 56px;border-bottom:1px solid var(--line);background:
+    radial-gradient(1200px 400px at 50% -80px, rgba(5,150,105,.08), transparent);}
+  .badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:2px;color:var(--green);background:var(--green-soft);border:1px solid var(--green-line);border-radius:999px;padding:4px 14px;margin-bottom:22px;}
+  h1{font-size:40px;font-weight:900;color:var(--ink);letter-spacing:-1px;line-height:1.25;}
+  h1 .accent{color:var(--green);}
+  .sub{font-size:17px;color:var(--muted);margin-top:14px;max-width:720px;}
+  .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .btn{display:inline-block;padding:10px 22px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;}
+  .btn.primary{background:var(--green);color:#fff;box-shadow:0 4px 14px rgba(5,150,105,.25);}
+  .btn.primary:hover{background:#047857;}
+  .btn.ghost{border:1px solid var(--line);color:var(--ink);background:#fff;}
+  .btn.ghost:hover{border-color:var(--green);color:var(--green);}
+  .meta{margin-top:26px;font-size:13px;color:var(--faint);}
+  .meta code{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:2px 8px;font-size:12px;color:var(--body);}
+
+  /* sections */
+  section{padding:56px 0;}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:3px;color:var(--green);text-transform:uppercase;margin-bottom:8px;}
+  h2{font-size:26px;font-weight:900;color:var(--ink);margin-bottom:8px;letter-spacing:-.5px;}
+  .lead{color:var(--muted);font-size:15px;margin-bottom:28px;}
+
+  /* deltas */
+  .deltas{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .delta{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;}
+  .delta .tag{display:inline-block;font-size:11px;font-weight:800;color:var(--green);background:var(--green-soft);border-radius:6px;padding:2px 8px;margin-bottom:10px;letter-spacing:1px;}
+  .delta h3{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .delta p{font-size:13.5px;color:var(--muted);line-height:1.7;}
+  .delta code{font-size:12px;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1px 6px;}
+
+  /* themes */
+  .themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+  .card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;transition:transform .18s ease, box-shadow .18s ease;text-decoration:none;display:block;}
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(17,24,39,.08);}
+  .thumb{height:120px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+  .thumb .dot{width:46px;height:46px;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,.12);}
+  .thumb .mini{position:absolute;bottom:10px;left:14px;right:14px;display:flex;gap:5px;}
+  .thumb .mini i{display:block;height:6px;border-radius:3px;}
+  .card .info{padding:16px 18px 18px;}
+  .card h3{font-size:16px;font-weight:800;color:var(--ink);}
+  .card .hex{font-size:11px;color:var(--faint);font-weight:600;letter-spacing:.5px;margin-left:6px;}
+  .card p{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.65;}
+  .card .new{position:absolute;top:12px;right:12px;background:#FDE68A;color:#92400E;font-size:10px;font-weight:800;border-radius:6px;padding:2px 8px;letter-spacing:1px;}
+  .gallery-note{margin-top:18px;font-size:13px;color:var(--faint);}
+
+  /* install */
+  .install{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px 28px;}
+  .install .step{display:flex;gap:14px;align-items:flex-start;margin-bottom:16px;}
+  .install .step:last-child{margin-bottom:0;}
+  .num{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+  .install p{font-size:14px;color:var(--body);}
+  .install pre{background:#111827;color:#E5E7EB;border-radius:10px;padding:12px 16px;font-size:13px;overflow-x:auto;margin-top:8px;font-family:Consolas,Menlo,monospace;}
+  .install .note{font-size:12.5px;color:var(--faint);margin-top:6px;}
+
+  /* workflow */
+  .flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;}
+  .flow .f{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;}
+  .flow b{display:block;font-size:13.5px;color:var(--ink);margin-bottom:4px;}
+  .flow span{font-size:12.5px;color:var(--muted);line-height:1.6;display:block;}
+
+  /* license */
+  .license{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px 28px;font-size:14px;color:var(--body);}
+  .license a{color:var(--green);font-weight:700;text-decoration:none;}
+  .license a:hover{text-decoration:underline;}
+  .license .thanks{margin-top:10px;font-size:13px;color:var(--muted);}
+
+  footer{border-top:1px solid var(--line);padding:28px 0 40px;text-align:center;font-size:12.5px;color:var(--faint);}
+  footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="badge">AI AGENT SKILL · AGPL-3.0 OPEN SOURCE</span>
+    <h1>gzh-design · 公众号排版技能<br><span class="accent">Markdown 一键排成</span> 公众号精致 HTML</h1>
+    <p class="sub">给 Claude Code / Codex / Cursor 等 AI Agent 用的排版技能：7 套精选主题、主题生成器、双关卡质量校验。生成结果样式全内联，粘贴进微信公众号编辑器不掉格式。</p>
+    <div class="cta">
+      <a class="btn primary" href="#install">开始使用</a>
+      <a class="btn ghost" href="#themes">浏览 7 套主题</a>
+      <a class="btn ghost" href="https://github.com/isjiamu/gzh-design-skill">上游项目 ↗</a>
+    </div>
+    <p class="meta">基础版源自 <code>isjiamu/gzh-design-skill</code>（甲木 × 摸鱼小李）· 本站为定制增强版的分享页</p>
+  </div>
+</header>
+
+<section id="deltas">
+  <div class="wrap">
+    <p class="kicker">WHAT'S NEW</p>
+    <h2>定制版新增了什么</h2>
+    <p class="lead">在保留上游全部能力的基础上，这个版本带来四项增量。</p>
+    <div class="deltas">
+      <div class="delta">
+        <span class="tag">THEME 07</span>
+        <h3>第 7 套主题：极简优雅白</h3>
+        <p>基金答辩风：纯白底 + 墨黑 <code>#1A1A1A</code> + 香槟金 <code>#B08D4C</code> 点睛，衬线大标题、booktabs 三线表、深色洞察框（全篇 ≤3 处）。适合深度分析、AI 新闻解读、政策解读、数据复盘。</p>
+      </div>
+      <div class="delta">
+        <span class="tag">SAFETY</span>
+        <h3>引号安全修复脚本</h3>
+        <p><code>fix_quotes.py</code>：只转换文本节点内的成对直引号、跳过代码块，自带「内容保留校验」——剔除引号后的纯文本与处理前逐字一致，杜绝批量替换静默吞字。</p>
+      </div>
+      <div class="delta">
+        <span class="tag">PRESET</span>
+        <h3>摸鱼绿定版装配</h3>
+        <p>无框居中封面 + 无目录 + 内容区零侧边距，并沉淀了微信编辑器会自动「纠正」混字号段落的规避写法——长文深度分析场景实测打磨。</p>
+      </div>
+      <div class="delta">
+        <span class="tag">GOTCHAS</span>
+        <h3>交付物变换三条铁律</h3>
+        <p>来自一次真实事故（内联 <code>python -c</code> 正则替换导致分组引用降级为八进制转义、31 处词组被静默吞掉）：变换写成 <code>.py</code> 文件、变换后校验内容保留、抽查要读实际句子。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="themes" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <p class="kicker">GALLERY</p>
+    <h2>7 套精选主题</h2>
+    <p class="lead">每套都是自成体系的厚组件库：设计变量、数十个精细组件、视觉层级表、文章类型配方表。点击卡片进入对应的可交互完整示例。</p>
+    <div class="themes">
+      <a class="card" href="gallery/moyu-green.html">
+        <div class="thumb" style="background:linear-gradient(135deg,#ECFDF5,#D1FAE5);">
+          <span class="dot" style="background:#059669;"></span>
+          <span class="mini"><i style="flex:2;background:#059669;"></i><i style="flex:1;background:#A7F3D0;"></i><i style="flex:1;background:#FDE68A;"></i></span>
+        </div>
+        <div class="info"><h3>摸鱼绿<span class="hex">#059669</span></h3><p>默认主题。教程、测评、清单、工具盘点、AI 新闻深度分析——卡片丰富、信息密度高，定版装配=无框居中封面+无目录。</p></div>
+      </a>
+      <a class="card" href="gallery/elegant-white.html">
+        <div class="thumb" style="background:linear-gradient(135deg,#FFFFFF,#F5F1E8);">
+          <span class="new">NEW</span>
+          <span class="dot" style="background:conic-gradient(#B08D4C 0 25%,#1A1A1A 25% 100%);"></span>
+          <span class="mini"><i style="flex:2;background:#1A1A1A;"></i><i style="flex:1;background:#B08D4C;"></i><i style="flex:1;background:#E5E7EB;"></i></span>
+        </div>
+        <div class="info"><h3>极简优雅白<span class="hex">#B08D4C</span></h3><p>本版新增，基金答辩风。深度分析、AI 新闻解读、政策解读、数据复盘——衬线标题、三线表、金色小面积点缀、大量留白。</p></div>
+      </a>
+      <a class="card" href="gallery/red-white.html">
+        <div class="thumb" style="background:linear-gradient(135deg,#FEF2F2,#FEE2E2);">
+          <span class="dot" style="background:#DC2626;"></span>
+          <span class="mini"><i style="flex:2;background:#DC2626;"></i><i style="flex:1;background:#FECACA;"></i><i style="flex:1;background:#E5E7EB;"></i></span>
+        </div>
+        <div class="info"><h3>红白色系<span class="hex">#DC2626</span></h3><p>深度分析、观点、力量感话题——经典编辑风，编号章节+引言卡+签名区，红色克制点睛。</p></div>
+      </a>
+      <a class="card" href="gallery/graphite-minimal.html">
+        <div class="thumb" style="background:linear-gradient(135deg,#FAFAFA,#E4E4E7);">
+          <span class="dot" style="background:#52525B;"></span>
+          <span class="mini"><i style="flex:2;background:#52525B;"></i><i style="flex:1;background:#D4D4D8;"></i><i style="flex:1;background:#E4E4E7;"></i></span>
+        </div>
+        <div class="info"><h3>石墨极简风<span class="hex">#52525B</span></h3><p>设计、科技评论、专业观点、高端品牌——极简克制、留白理性、全灰阶。</p></div>
+      </a>
+      <a class="card" href="gallery/zen-whitespace.html">
+        <div class="thumb" style="background:linear-gradient(135deg,#F6F8F7,#DDE7E1);">
+          <span class="dot" style="background:#4A5D52;"></span>
+          <span class="mini"><i style="flex:2;background:#4A5D52;"></i><i style="flex:1;background:#B5C8BC;"></i><i style="flex:1;background:#E5E7EB;"></i></span>
+        </div>
+        <div class="info"><h3>留白禅意风<span class="hex">#4A5D52</span></h3><p>禅意冥想、极简生活、深度随笔——呼吸感最强，大留白、居中衬线引用。</p></div>
+      </a>
+      <a class="card" href="gallery/moyu-ticket.html">
+        <div class="thumb" style="background:linear-gradient(135deg,#ECFDF5,#A7F3D0);">
+          <span class="dot" style="background:repeating-linear-gradient(45deg,#059669 0 6px,#10B981 6px 12px);"></span>
+          <span class="mini"><i style="flex:2;background:#059669;"></i><i style="flex:1;background:#111827;"></i><i style="flex:1;background:#FDE68A;"></i></span>
+        </div>
+        <div class="info"><h3>摸鱼票据风<span class="hex">#059669</span></h3><p>工具对比、创意评测——票据/门票视觉隐喻，星级评分+编号+硬阴影卡片。</p></div>
+      </a>
+      <a class="card" href="gallery/olive-journal.html">
+        <div class="thumb" style="background:linear-gradient(135deg,#F7F6F3,#E7E4DC);">
+          <span class="dot" style="background:conic-gradient(#ed7b2f 0 25%,#1e1f23 25% 100%);"></span>
+          <span class="mini"><i style="flex:2;background:#1e1f23;"></i><i style="flex:1;background:#ed7b2f;"></i><i style="flex:1;background:#D1D5DB;"></i></span>
+        </div>
+        <div class="info"><h3>橄榄手记<span class="hex">#1e1f23</span></h3><p>内刊手记、深度评测、案例复盘——编辑部内刊质感，分节形式多样，信息密度偏高。</p></div>
+      </a>
+    </div>
+    <p class="gallery-note">* 画廊展示的是同一篇示例长文在不同主题下的完整排版效果；极简优雅白页由定制版新增。不够用？让 AI 用主题生成器按一句话描述或参考图现造一套。</p>
+  </div>
+</section>
+
+<section id="install">
+  <div class="wrap">
+    <p class="kicker">GET STARTED</p>
+    <h2>三步接入你的 Agent</h2>
+    <p class="lead">装好后对 Agent 说一句「用摸鱼绿把这篇文章排成公众号 HTML」即可。</p>
+    <div class="install">
+      <div class="step">
+        <span class="num">1</span>
+        <div>
+          <p>一行安装（或让 Agent 自行 clone 到 skills 目录）</p>
+          <pre>npx skills add https://github.com/&lt;你的GitHub用户名&gt;/&lt;仓库名&gt;</pre>
+          <p class="note">也可以手动：<code>git clone</code> 本仓库到 <code>~/.claude/skills/gzh-design</code>（Codex / Cursor 同理，放到各自的 skills 目录）。</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <div>
+          <p>写好 Markdown，交给 Agent 并指定主题</p>
+          <pre>用摸鱼绿把这篇文章排成公众号 HTML：article.md</pre>
+        </div>
+      </div>
+      <div class="step">
+        <span class="num">3</span>
+        <div>
+          <p>打开生成的预览页，点「复制到公众号」，去编辑器粘贴</p>
+          <p class="note">脚本会自动跑完双关卡校验（组件库源头关 + 产物合规关），直引号问题由 fix_quotes.py 安全修复，ERROR 清零才交付。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="workflow" style="padding-top:0;">
+  <div class="wrap">
+    <p class="kicker">PIPELINE</p>
+    <h2>工作流一览</h2>
+    <p class="lead">确定性规则全部沉淀在组件库与脚本里，模型只做内容判断——换模型不走样，国内外模型都能跑出一致效果。</p>
+    <div class="flow">
+      <div class="f"><b>① 选主题</b><span>按题材推荐，7 套内置 + 生成器现造</span></div>
+      <div class="f"><b>② 读组件库</b><span>主题库 + 通用增量库，HTML 从库里取</span></div>
+      <div class="f"><b>③ 解析结构</b><span>标题/章节/引用/代码块/表格/图片</span></div>
+      <div class="f"><b>④ 装配 HTML</b><span>自动编号、关键词下划线、全角标点、签名合并</span></div>
+      <div class="f"><b>⑤ 双关卡校验</b><span>component_lint + validate，ERROR 清零</span></div>
+      <div class="f"><b>⑥ 一键复制</b><span>预览页复制按钮，粘贴进公众号不掉格式</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="license" style="padding-top:0;">
+  <div class="wrap">
+    <div class="license">
+      <p><b>开源协议：AGPL-3.0</b> —— 本定制版基于 <a href="https://github.com/isjiamu/gzh-design-skill">isjiamu/gzh-design-skill</a>（甲木 × 摸鱼小李 联名，AGPL-3.0）衍生，按协议以相同许可证开源：保留署名、衍生与网络服务均须公开源代码。感谢上游两位作者的出色工作。</p>
+      <p class="thanks">主题清单与下划线色值的单一权威来源见仓库 <code>references/theme-index.md</code>；欢迎通过 Issue / PR 贡献新主题，通用性增量建议同步回馈上游。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    gzh-design · 公众号排版技能（定制增强版） · AGPL-3.0 · <a href="https://github.com/isjiamu/gzh-design-skill">upstream: isjiamu/gzh-design-skill</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<section style="max-width: 677px;margin: 0 auto;padding: 0 15px;font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;font-size: 16px;line-height: 1.9;color: #1A1A1A;background: #ffffff;">
+
+  <!-- 题头卡（组件2） -->
+  <section style="text-align:center;padding:30px 0 20px;border-bottom:1px solid #1A1A1A;margin-bottom:30px;">
+    <p style="font-size:12px;letter-spacing:3px;color:#B08D4C;margin:0 0 12px;font-weight:600;">
+      <span leaf="">DEEP ANALYSIS</span>
+    </p>
+    <p style="font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:700;color:#1A1A1A;line-height:1.45;margin:0 0 10px;">
+      <span leaf="">为什么公众号排版值得一套组件库：</span><br>
+      <span leaf="">确定性规则胜过模型现场发挥</span>
+    </p>
+    <p style="font-size:15px;color:#888888;line-height:1.6;margin:0;">
+      <span leaf="">排版质量的上限由组件库决定，而不是由模型的临场心情决定。</span>
+    </p>
+    <p style="font-size:13px;color:#999999;margin:14px 0 0;">
+      <span leaf="">撰文 · 2026年10月1日 ｜ 阅读约6分钟</span>
+    </p>
+  </section>
+
+  <!-- 引言正文（组件6） -->
+  <p style="margin-bottom:20px;text-align:justify;">
+    <span leaf="">让 AI 直接「写一段好看的公众号 HTML」，多数人得到的结果是风格漂移：今天绿色、明天紫色，段距忽大忽小，粘贴到微信编辑器里还常常掉格式。问题不在模型不够聪明，而在</span><span style="border-bottom:2px solid #B08D4C;font-weight:600;color:#1A1A1A;"><span leaf="">缺少一套确定性的约束</span></span><span leaf="">。</span>
+  </p>
+  <p style="margin-bottom:20px;text-align:justify;">
+    <span leaf="">gzh-design 的思路正相反：把主题色板、组件结构、平台红线全部预先固化，模型只负责把内容填进骨架。这篇用「极简优雅白」主题排出来，本身就是一个可交互的</span><span style="border-bottom:2px solid #B08D4C;font-weight:600;color:#1A1A1A;"><span leaf="">完整示例</span></span><span leaf="">。</span>
+  </p>
+
+  <!-- 速览框（组件3） -->
+  <section style="border:1px solid #1A1A1A;border-top-width:2px;border-bottom-width:2px;padding:20px 24px;margin:28px 0;">
+    <p style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:700;color:#1A1A1A;margin:0 0 14px;letter-spacing:1px;">
+      <span leaf="">本文看点</span>
+    </p>
+    <table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.8;">
+      <tbody>
+        <tr>
+          <td style="padding:6px 0;color:#999999;width:90px;vertical-align:top;"><span leaf="">核心思路</span></td>
+          <td style="padding:6px 0 6px 12px;color:#1A1A1A;"><span leaf="">约束优于自由：预设色板与固定组件先保住输出下限</span></td>
+        </tr>
+        <tr>
+          <td style="padding:6px 0;border-top:1px solid #eeeeee;color:#999999;vertical-align:top;"><span leaf="">视觉语言</span></td>
+          <td style="padding:6px 0 6px 12px;border-top:1px solid #eeeeee;color:#1A1A1A;"><span leaf="">纯白底 + 墨黑正文 + 香槟金小面积点缀 + 衬线标题</span></td>
+        </tr>
+        <tr>
+          <td style="padding:6px 0;border-top:1px solid #eeeeee;color:#999999;vertical-align:top;"><span leaf="">质量兜底</span></td>
+          <td style="padding:6px 0 6px 12px;border-top:1px solid #eeeeee;color:#1A1A1A;"><span leaf="">双关卡脚本校验，ERROR 清零才交付</span></td>
+        </tr>
+        <tr>
+          <td style="padding:6px 0;border-top:1px solid #eeeeee;color:#999999;vertical-align:top;"><span leaf="">适合题材</span></td>
+          <td style="padding:6px 0 6px 12px;border-top:1px solid #eeeeee;color:#1A1A1A;"><span leaf="">深度分析、AI 新闻解读、政策解读、数据复盘</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 第一章（组件4） -->
+  <p style="font-family:Georgia,'Times New Roman',serif;font-size:21px;font-weight:700;color:#1A1A1A;margin:36px 0 16px;padding-left:12px;border-left:3px solid #1A1A1A;line-height:1.5;">
+    <span leaf="">一、层级靠字重与留白，不靠颜色堆砌</span>
+  </p>
+
+  <p style="margin-bottom:20px;text-align:justify;">
+    <span leaf="">这个主题只有两种主色：</span><strong style="font-weight:600;color:#1A1A1A;"><span leaf="">墨黑 #1A1A1A 承担正文与结构</span></strong><span leaf="">，香槟金 #B08D4C 只做小面积点缀——章节竖线、编号、关键数字、金色下划线。约九成文字交给一套中性灰阶，彩色从不承担正文阅读。</span>
+  </p>
+  <p style="margin-bottom:20px;text-align:justify;">
+    <span leaf="">标题用 Georgia 衬线体建立学术庄重感；表格采用 booktabs 三线表（上下粗墨线 + 行间浅灰线），</span><span style="border-bottom:2px solid #B08D4C;font-weight:600;color:#1A1A1A;"><span leaf="">无任何背景填充</span></span><span leaf="">，这也是本主题最具辨识度的标志组件：</span>
+  </p>
+
+  <!-- booktabs 表（组件10） -->
+  <table style="width:100%;border-collapse:collapse;font-size:14px;margin:20px 0;">
+    <thead>
+      <tr>
+        <th style="padding:10px 12px;border-top:2px solid #1A1A1A;border-bottom:1px solid #1A1A1A;text-align:left;font-weight:600;color:#1A1A1A;width:32%;"><span leaf="">设计要素</span></th>
+        <th style="padding:10px 12px;border-top:2px solid #1A1A1A;border-bottom:1px solid #1A1A1A;text-align:left;font-weight:600;color:#1A1A1A;"><span leaf="">本主题的做法</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:10px 12px;border-bottom:1px solid #eeeeee;vertical-align:top;"><strong style="font-weight:600;"><span leaf="">主色</span></strong></td>
+        <td style="padding:10px 12px;border-bottom:1px solid #eeeeee;vertical-align:top;"><span leaf="">墨黑 #1A1A1A，承担标题、正文、表格粗线</span></td>
+      </tr>
+      <tr>
+        <td style="padding:10px 12px;border-bottom:1px solid #eeeeee;vertical-align:top;"><strong style="font-weight:600;"><span leaf="">点缀色</span></strong></td>
+        <td style="padding:10px 12px;border-bottom:1px solid #eeeeee;vertical-align:top;"><span leaf="">香槟金 #B08D4C，只出现在竖线、编号、下划线、关键数字</span></td>
+      </tr>
+      <tr>
+        <td style="padding:10px 12px;border-bottom:1px solid #eeeeee;vertical-align:top;"><strong style="font-weight:600;"><span leaf="">表格</span></strong></td>
+        <td style="padding:10px 12px;border-bottom:1px solid #eeeeee;vertical-align:top;"><span leaf="">booktabs 三线表，行间浅灰线，末行 2px 墨线收尾</span></td>
+      </tr>
+      <tr>
+        <td style="padding:10px 12px;border-bottom:2px solid #1A1A1A;vertical-align:top;"><strong style="font-weight:600;"><span leaf="">最强锚点</span></strong></td>
+        <td style="padding:10px 12px;border-bottom:2px solid #1A1A1A;vertical-align:top;"><span leaf="">深色洞察框，墨黑底 + 金色衬线标题，全篇不超过 3 处</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 数据对比卡（组件11） -->
+  <section style="margin:24px 0;text-align:center;">
+    <table style="width:100%;border-collapse:collapse;font-size:14px;">
+      <tbody>
+        <tr>
+          <td style="padding:20px 10px;border-top:2px solid #1A1A1A;border-bottom:1px solid #dddddd;text-align:center;width:50%;">
+            <p style="font-size:13px;color:#999999;margin:0 0 6px;"><span leaf="">无约束排版</span></p>
+            <p style="font-family:Georgia,'Times New Roman',serif;font-size:36px;font-weight:700;color:#999999;line-height:1;margin:0 0 6px;"><span leaf="">7 套风格</span></p>
+            <p style="font-size:12px;color:#bbbbbb;margin:0;"><span leaf="">同一模型每次现场发挥</span></p>
+          </td>
+          <td style="padding:20px 10px;border-top:2px solid #1A1A1A;border-bottom:1px solid #dddddd;text-align:center;width:50%;">
+            <p style="font-size:13px;color:#B08D4C;margin:0 0 6px;"><span leaf="">组件库约束</span></p>
+            <p style="font-family:Georgia,'Times New Roman',serif;font-size:36px;font-weight:700;color:#1A1A1A;line-height:1;margin:0 0 6px;"><span leaf="">1 套气质</span></p>
+            <p style="font-size:12px;color:#999999;margin:0;"><span leaf="">同类文章排版气质稳定</span></p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding:12px 10px;border-bottom:2px solid #1A1A1A;text-align:center;font-size:13px;color:#666666;">
+            <span leaf="">同类文章的返工率下降，一次交付通过率接近 </span><strong style="color:#B08D4C;font-weight:600;"><span leaf="">100%</span></strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 第二章（组件4） -->
+  <p style="font-family:Georgia,'Times New Roman',serif;font-size:21px;font-weight:700;color:#1A1A1A;margin:36px 0 16px;padding-left:12px;border-left:3px solid #1A1A1A;line-height:1.5;">
+    <span leaf="">二、粘贴不掉格式的秘密：全内联 + leaf 包裹</span>
+  </p>
+
+  <p style="margin-bottom:20px;text-align:justify;">
+    <span leaf="">微信公众号编辑器会过滤大量「正常网页写法」：<code style="background:#f4f4f4;color:#1A1A1A;padding:2px 6px;border-radius:4px;font-family:'SF Mono',Consolas,Monaco,monospace;font-size:14px;">&lt;style&gt;</code> 标签、class、grid 布局、absolute 定位统统被剥掉。所以本主题所有组件遵守同一组铁律：样式全部写在</span><span style="border-bottom:2px solid #B08D4C;font-weight:600;color:#1A1A1A;"><span leaf="">行内 style</span></span><span leaf="">，每个文字节点用 <code style="background:#f4f4f4;color:#1A1A1A;padding:2px 6px;border-radius:4px;font-family:'SF Mono',Consolas,Monaco,monospace;font-size:14px;">&lt;span leaf=""&gt;</code> 包裹。</span>
+  </p>
+
+  <!-- 引用块（组件8a） -->
+  <section style="border-left:3px solid #B08D4C;padding:12px 20px;margin:20px 0;background:#fafafa;">
+    <p style="font-size:15px;color:#1A1A1A;margin:0;line-height:1.9;">
+      <strong style="font-weight:600;color:#1A1A1A;"><span leaf="">一句话定义：</span></strong><span leaf="">与其祈祷模型「记得住」平台规则，不如让校验脚本确定性地兜住每一条红线。</span>
+    </p>
+  </section>
+
+  <p style="margin-bottom:20px;text-align:justify;">
+    <span leaf="">交付前跑两道脚本：组件库源头关（component_lint）扫反模式，产物关（validate_gzh_html）扫禁用标签、leaf 包裹与半角标点。任何 ERROR 都会打回装配步骤，</span><strong style="font-weight:600;color:#1A1A1A;"><span leaf="">全绿才允许交付</span></strong><span leaf="">。</span>
+  </p>
+
+  <!-- 深色洞察框（组件9，第1处） -->
+  <section style="background:#1A1A1A;padding:20px 24px;margin:24px 0;">
+    <p style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:700;color:#B08D4C;margin:0 0 10px;letter-spacing:1px;">
+      <span leaf="">关键洞察</span>
+    </p>
+    <p style="font-size:14px;color:#eeeeee;margin:0 0 10px;line-height:1.9;">
+      <strong style="color:#B08D4C;font-weight:600;"><span leaf="">规则下沉脚本：</span></strong><span leaf=""> 平台限制这类死规则交给校验脚本，模型只做内容判断——这是输出质量可复现的根本原因。</span>
+    </p>
+    <p style="font-size:14px;color:#eeeeee;margin:0;line-height:1.9;">
+      <strong style="color:#B08D4C;font-weight:600;"><span leaf="">换模型不走样：</span></strong><span leaf=""> 排版逻辑全部沉淀在组件库里，Claude、GPT、Gemini 与国产模型都能跑出一致效果。</span>
+    </p>
+  </section>
+
+  <!-- 第三章（组件4） -->
+  <p style="font-family:Georgia,'Times New Roman',serif;font-size:21px;font-weight:700;color:#1A1A1A;margin:36px 0 16px;padding-left:12px;border-left:3px solid #1A1A1A;line-height:1.5;">
+    <span leaf="">三、什么时候选这套主题</span>
+  </p>
+
+  <p style="margin-bottom:20px;text-align:justify;">
+    <span leaf="">按文章类型查配方表即可：深度分析与 AI 新闻解读是默认场景；政策解读用编号要点框区分义务与禁止；数据复盘让 booktabs 表格与</span><span style="border-bottom:2px solid #B08D4C;font-weight:600;color:#1A1A1A;"><span leaf="">大数字对比卡</span></span><span leaf="">唱主角。</span>
+  </p>
+
+  <!-- 编号要点框（组件12） -->
+  <section style="border:1px solid #1A1A1A;border-top-width:2px;border-bottom-width:2px;padding:20px 24px;margin:24px 0;">
+    <p style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:700;color:#1A1A1A;margin:0 0 14px;letter-spacing:1px;">
+      <span leaf="">三个典型使用场景</span>
+    </p>
+    <p style="font-size:14px;color:#1A1A1A;line-height:2;margin:0 0 8px;">
+      <span style="color:#B08D4C;font-weight:600;"><span leaf="">01</span></span><span leaf="">&nbsp;</span><strong style="font-weight:600;"><span leaf="">AI 新闻深度解读</span></strong><span leaf=""> — 题头卡 + 速览框开场，三线表呈现基准数据，洞察框收拢核心判断</span>
+    </p>
+    <p style="font-size:14px;color:#1A1A1A;line-height:2;margin:0 0 8px;">
+      <span style="color:#B08D4C;font-weight:600;"><span leaf="">02</span></span><span leaf="">&nbsp;</span><strong style="font-weight:600;"><span leaf="">政策与监管解读</span></strong><span leaf=""> — 原文引文块 + 金色/灰色编号区分义务与禁止</span>
+    </p>
+    <p style="font-size:14px;color:#1A1A1A;line-height:2;margin:0;">
+      <span style="color:#B08D4C;font-weight:600;"><span leaf="">03</span></span><span leaf="">&nbsp;</span><strong style="font-weight:600;"><span leaf="">财报与数据复盘</span></strong><span leaf=""> — 数据对比卡放大前后反差，关键数字金色加粗</span>
+    </p>
+  </section>
+
+  <!-- 结语（组件4 变体） -->
+  <p style="font-family:Georgia,'Times New Roman',serif;font-size:21px;font-weight:700;color:#1A1A1A;margin:36px 0 16px;padding-left:12px;border-left:3px solid #1A1A1A;line-height:1.5;">
+    <span leaf="">结语：好排版是设计出来的，不是碰运气碰出来的</span>
+  </p>
+
+  <p style="margin-bottom:20px;text-align:justify;">
+    <span leaf="">当审美判断被沉淀为色板、组件与配方表，每一次输出都在同一条水准线上。这正是「极简优雅白」想证明的事：</span><strong style="font-weight:600;color:#1A1A1A;"><span leaf="">克制的规则，成就稳定的质感</span></strong><span leaf="">。</span>
+  </p>
+
+  <!-- 分隔线（组件14） -->
+  <hr style="border:none;border-top:1px solid #1A1A1A;margin:32px 0;">
+
+  <!-- 话题标签（组件14） -->
+  <p style="text-align:center;font-size:12px;color:#999999;line-height:2.2;margin:0 0 24px;">
+    <span leaf="">#公众号排版 &nbsp; #AI Agent &nbsp; #深度分析 &nbsp; #主题组件库 &nbsp; #极简优雅白</span>
+  </p>
+
+  <!-- 文末签名区（组件14） -->
+  <section style="text-align:center;padding:20px 0 30px;border-top:1px solid #1A1A1A;">
+    <p style="font-size:13px;color:#999999;margin:0 0 6px;">
+      <span leaf="">本页为「极简优雅白」主题的交互式示例，由 gzh-design 定制版生成</span>
+    </p>
+    <p style="font-size:13px;color:#B08D4C;font-weight:600;margin:0;">
+      <span leaf="">组件库与工作流详见仓库 README</span>
+    </p>
+  </section>
+
+</section>
