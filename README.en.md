@@ -4,7 +4,7 @@
 
 # TierFlow-Design
 
-**From Markdown to a better reading experience on WeChat.**
+**No coding needed. Make your WeChat articles look great.**
 
 [Live website](https://mayanbiao1234.github.io/TierFlow-Design/) · [Seven-theme gallery](https://mayanbiao1234.github.io/TierFlow-Design/#themes) · [中文](README.md) · [AGPL-3.0](LICENSE)
 

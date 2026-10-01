@@ -2,7 +2,9 @@
 
 <a href="https://mayanbiao1234.github.io/TierFlow-Design/"><img src="docs/assets/cover.svg" alt="TierFlow-Design · 排版交给智能体，表达留给你。7 套主题，一句话开始公众号排版。" width="100%"></a>
 
-**TierFlow-Design · 给智能体一句话，完成公众号排版**
+**不懂代码，也能把公众号排得很好看。**
+
+给智能体一句话，完成公众号排版。
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-254d3e?style=flat-square)](LICENSE)
 [![Themes: 7](https://img.shields.io/badge/主题-7_套_＋_生成器-7b8b5c?style=flat-square)](references/theme-index.md)
