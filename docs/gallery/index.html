@@ -1,57 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>gzh-design · 6 套主题排版预览</title>
-<style>
-  body{margin:0;background:#f4f4f5;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:#1f2937}
-  header{padding:32px 24px 8px;max-width:1480px;margin:0 auto}
-  h1{font-size:24px;margin:0 0 8px}
-  .sub{color:#6b7280;font-size:14px;line-height:1.7;margin:0 0 4px}
-  .grid{display:flex;flex-wrap:wrap;gap:24px;padding:16px 24px 32px;max-width:1480px;margin:0 auto}
-  .card{background:#fff;border-radius:14px;box-shadow:0 4px 16px -6px rgba(0,0,0,.12);overflow:hidden;width:380px;display:flex;flex-direction:column}
-  .bar{display:flex;align-items:center;gap:10px;padding:13px 18px;border-bottom:1px solid #f0f0f0}
-  .dot{width:14px;height:14px;border-radius:50%;flex-shrink:0;border:1px solid rgba(0,0,0,.06)}
-  .tname{font-weight:700;font-size:15px}
-  .tmeta{margin-left:auto;font-size:11px;color:#9ca3af;font-family:monospace}
-  .tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;background:#ecfdf5;color:#059669;margin-left:6px}
-  iframe{width:100%;height:680px;border:0;background:#fff}
-  footer{max-width:1480px;margin:0 auto;padding:8px 24px 40px;color:#9ca3af;font-size:13px}
-</style>
-</head>
-<body>
-<header>
-  <h1>gzh-design · 6 套主题排版预览</h1>
-  <p class="sub">同一篇文章《做了些爆款 Skills 以后，我对 Skills 的看法》用 6 套精选主题各排一遍。每个画框约等于公众号手机宽度，可在框内滚动查看全文。</p>
-  <p class="sub">全部通过合规校验：无 <code>div/class/style</code> 标签、文字 <code>span leaf</code> 包裹、标点全角。不够用时可让 AI 用主题生成器现生成一套。</p>
-</header>
-<div class="grid" id="grid"></div>
-<footer>甲木 × 摸鱼小李 联名共建 · 主题清单见 references/theme-index.md</footer>
-<script>
-  const THEMES=[
-    ["摸鱼绿（默认）","#059669","moyu-green.html","default"],
-    ["红白色系","#DC2626","red-white.html",""],
-    ["石墨极简风","#52525B","graphite-minimal.html",""],
-    ["留白禅意风","#4A5D52","zen-whitespace.html",""],
-    ["摸鱼票据风","#059669","moyu-ticket.html",""],
-    ["橄榄手记","#1e1f23","olive-journal.html",""],
-  ];
-  const grid=document.getElementById('grid');
-  THEMES.forEach(function(t){
-    var name=t[0],color=t[1],file=t[2],tag=t[3];
-    var slug=file.replace('.html','');
-    var card=document.createElement('div');
-    card.className='card';
-    card.innerHTML=
-      '<div class="bar">'+
-        '<span class="dot" style="background:'+color+'"></span>'+
-        '<span class="tname">'+name+(tag?'<span class="tag">'+tag+'</span>':'')+'</span>'+
-        '<span class="tmeta">'+slug+'</span>'+
-      '</div>'+
-      '<iframe src="'+file+'" loading="lazy" title="'+name+'"></iframe>';
-    grid.appendChild(card);
-  });
-</script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="gzh-design 清枢定制增强版：7 套公众号排版主题，让 AI Agent 将 Markdown 排成精致 HTML。在线预览主题，一行安装，开源可定制。"
+    />
+    <meta name="theme-color" content="#f6f5ef" />
+    <meta property="og:title" content="gzh-design · 让好内容，有好排版。" />
+    <meta
+      property="og:description"
+      content="给 AI Agent 的开源公众号排版技能。7 套主题、主题生成器与 HTML 校验。"
+    />
+    <meta property="og:type" content="website" />
+    <title>gzh-design · 让好内容，有好排版。</title>
+    <link rel="icon" href="../assets/brand.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/site.css" />
+    <script src="../assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    <header class="site-header wrap">
+      <a class="brand" href="../" aria-label="gzh-design 首页"
+        ><img src="../assets/brand.svg" width="32" height="32" alt="" /><span
+          >gzh-design<span class="brand-caption">公众号排版技能</span></span
+        ></a
+      >
+      <nav aria-label="主导航">
+        <a href="#themes">主题展厅</a><a href="../#workflow">如何使用</a
+        ><a
+          class="nav-github"
+          href="https://github.com/mayanbiao1234/gzh-design"
+          >GitHub ↗</a
+        >
+      </nav>
+    </header>
+    <main id="main">
+      <section id="themes" class="section wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / THE THEME LIBRARY</p>
+            <h2>同样的文字，不同的气质。</h2>
+          </div>
+          <p>
+            为每一次表达，找到合适的阅读氛围。<br />切换主题，浏览真实 HTML
+            示例。
+          </p>
+        </div>
+        <div class="theme-explorer" data-gallery-base="./">
+          <div class="theme-sidebar">
+            <div class="theme-list" role="group" aria-label="选择排版主题">
+              <button
+                class="theme-option"
+                type="button"
+                data-theme="moyu-green"
+                aria-pressed="false"
+              >
+                <span class="theme-number">01</span
+                ><span class="theme-swatch" style="--swatch: #059669"></span
+                ><span>摸鱼绿<small>鲜活 · 清晰 · 高信息密度</small></span
+                ><span class="theme-badge">默认</span></button
+              ><button
+                class="theme-option"
+                type="button"
+                data-theme="red-white"
+                aria-pressed="false"
+              >
+                <span class="theme-number">02</span
+                ><span class="theme-swatch" style="--swatch: #dc2626"></span
+                ><span
+                  >红白色系<small>鲜明 · 有力 · 经典编辑风</small></span
+                ></button
+              ><button
+                class="theme-option"
+                type="button"
+                data-theme="graphite-minimal"
+                aria-pressed="false"
+              >
+                <span class="theme-number">03</span
+                ><span class="theme-swatch" style="--swatch: #52525b"></span
+                ><span
+                  >石墨极简<small>冷静 · 克制 · 专业观点</small></span
+                ></button
+              ><button
+                class="theme-option"
+                type="button"
+                data-theme="zen-whitespace"
+                aria-pressed="false"
+              >
+                <span class="theme-number">04</span
+                ><span class="theme-swatch" style="--swatch: #4a5d52"></span
+                ><span
+                  >留白禅意<small>舒展 · 安静 · 深度随笔</small></span
+                ></button
+              ><button
+                class="theme-option"
+                type="button"
+                data-theme="moyu-ticket"
+                aria-pressed="false"
+              >
+                <span class="theme-number">05</span
+                ><span class="theme-swatch" style="--swatch: #059669"></span
+                ><span
+                  >摸鱼票据<small>有趣 · 轻盈 · 创意评测</small></span
+                ></button
+              ><button
+                class="theme-option"
+                type="button"
+                data-theme="olive-journal"
+                aria-pressed="false"
+              >
+                <span class="theme-number">06</span
+                ><span class="theme-swatch" style="--swatch: #ed7b2f"></span
+                ><span
+                  >橄榄手记<small>温暖 · 耐读 · 编辑部内刊</small></span
+                ></button
+              ><button
+                class="theme-option"
+                type="button"
+                data-theme="elegant-white"
+                aria-pressed="true"
+              >
+                <span class="theme-number">07</span
+                ><span class="theme-swatch" style="--swatch: #b08d4c"></span
+                ><span>极简优雅白<small>优雅 · 留白 · 深度分析</small></span
+                ><span class="theme-badge">新增</span>
+              </button>
+            </div>
+            <div class="theme-custom">
+              <span aria-hidden="true">✳</span>
+              <div>
+                <b>你的风格，不止这七种。</b>
+                <p>一句描述或一张参考图，<br />让 Agent 为你生成专属主题。</p>
+              </div>
+            </div>
+          </div>
+          <div class="theme-stage">
+            <div class="preview-toolbar">
+              <span class="mono"
+                >LIVE HTML PREVIEW <span class="preview-dot"></span
+              ></span>
+              <div class="viewport-switch" role="group" aria-label="预览宽度">
+                <button type="button" data-width="mobile" aria-pressed="true">
+                  手机</button
+                ><button type="button" data-width="wide" aria-pressed="false">
+                  宽屏
+                </button>
+              </div>
+            </div>
+            <div class="preview-canvas">
+              <div class="preview-frame">
+                <iframe
+                  id="theme-preview"
+                  src="./elegant-white.html"
+                  title="极简优雅白主题排版示例"
+                  loading="lazy"
+                  sandbox="allow-same-origin"
+                ></iframe>
+              </div>
+            </div>
+            <div class="preview-footer">
+              <div>
+                <b id="preview-name">极简优雅白</b
+                ><span id="preview-description"
+                  >墨黑与香槟金，让深度内容沉静下来。</span
+                >
+              </div>
+              <a
+                id="preview-link"
+                href="./elegant-white.html"
+                target="_blank"
+                rel="noopener"
+                >完整示例 ↗</a
+              >
+            </div>
+            <p
+              class="sr-only"
+              id="preview-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </div>
+        </div>
+        <p class="section-note">
+          展厅使用随项目保留的示例文章，展示各主题的组件风格；生成时会按你的文章结构和主题配方重新装配。摸鱼绿示例保留上游版式，当前默认规则见主题文档。
+        </p>
+        <noscript
+          ><p>
+            启用 JavaScript 可切换预览。也可直接浏览：<a
+              href="./moyu-green.html"
+              >摸鱼绿</a
+            >
+            · <a href="./red-white.html">红白色系</a> ·
+            <a href="./graphite-minimal.html">石墨极简</a> ·
+            <a href="./zen-whitespace.html">留白禅意</a> ·
+            <a href="./moyu-ticket.html">摸鱼票据</a> ·
+            <a href="./olive-journal.html">橄榄手记</a> ·
+            <a href="./elegant-white.html">极简优雅白</a>
+          </p></noscript
+        >
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <span
+        ><b>gzh-design</b>
+        <span class="footer-caption">清枢定制增强版</span></span
+      ><span>让写作回到内容本身。</span>
+      <div>
+        <a href="https://github.com/mayanbiao1234/gzh-design/blob/main/LICENSE"
+          >AGPL-3.0</a
+        ><a
+          href="https://github.com/mayanbiao1234/gzh-design/blob/main/CONTRIBUTING.md"
+          >参与贡献 ↗</a
+        >
+      </div>
+    </footer>
+  </body>
 </html>

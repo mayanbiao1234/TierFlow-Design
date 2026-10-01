@@ -5,8 +5,8 @@
 ## 项目结构速览
 
 - `SKILL.md` — 排版工作流主文档（Agent 入口）
-- `references/` — 6 套主题组件库 + 通用增量库 + 主题索引 + 主题生成器 + 触发用例
-- `scripts/` — 两个校验脚本（见下方「可验证循环」）
+- `references/` — 7 套主题组件库 + 通用增量库 + 主题索引 + 主题生成器 + 触发用例
+- `scripts/` — 校验、引号修复与预览包装脚本
 - `assets/` — 演示输入文章
 - `docs/gallery/` — 主题风格的浏览器预览
 
@@ -40,3 +40,7 @@ python3 scripts/validate_gzh_html.py <生成的.html>
 - 一个 PR 只做一件事（一套新主题 / 一处修复 / 一处文档）。
 - commit 信息说清「改了什么 + 为什么」。
 - 不要提交本地排版产物（`.gitignore` 已忽略 `*_排版_*.html`）。
+
+## 修改展示网站
+
+网站源文件位于 `docs/`，无构建依赖。运行 `python -m http.server 4173 --directory docs` 查看页面；在桌面与手机宽度检查主题切换、预览链接、复制按钮和键盘操作。提交前运行 `python scripts/check_project.py`。

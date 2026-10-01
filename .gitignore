@@ -23,3 +23,14 @@ node_modules/
 # 预览图托管在 GitHub Release，不入库
 docs/screenshots/
 *.png
+
+# Credentials and local working material
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.workbuddy/
+.codex/
+tmp/
+private/

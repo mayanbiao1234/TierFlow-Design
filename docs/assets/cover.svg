@@ -1,0 +1,100 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1280"
+  height="640"
+  viewBox="0 0 1280 640"
+>
+  <rect width="1280" height="640" rx="24" fill="#f6f5ef" />
+  <g fill="none" stroke="#dadcd0">
+    <path d="M60 99h1160M60 552h1160M764 140v372" />
+  </g>
+  <g font-family="Segoe UI,Microsoft YaHei,sans-serif">
+    <text x="60" y="65" fill="#254d3e" font-size="25" font-weight="700">
+      gzh-design
+    </text>
+    <text
+      x="1220"
+      y="65"
+      fill="#62685e"
+      font-size="15"
+      text-anchor="end"
+      letter-spacing="3"
+    >
+      OPEN SOURCE · AGENT SKILL
+    </text>
+    <text
+      x="60"
+      y="225"
+      fill="#242c26"
+      font-size="74"
+      font-family="SimSun,serif"
+      font-weight="700"
+    >
+      让好内容，
+    </text>
+    <text
+      x="60"
+      y="326"
+      fill="#254d3e"
+      font-size="74"
+      font-family="SimSun,serif"
+      font-weight="700"
+    >
+      有好排版。
+    </text>
+    <text x="64" y="389" fill="#62685e" font-size="22">
+      从 Markdown 到微信公众号，把排版交给 Agent。
+    </text>
+    <rect x="60" y="436" width="196" height="43" rx="22" fill="#254d3e" />
+    <text x="158" y="464" text-anchor="middle" fill="#fff" font-size="16">
+      7 套主题 · 无限可能
+    </text>
+    <text x="281" y="464" fill="#62685e" font-size="17">AGPL-3.0</text>
+    <g transform="translate(831 151) rotate(5 160 173)">
+      <rect width="305" height="345" rx="6" fill="#e6e8df" stroke="#cdd1c3" />
+    </g>
+    <g transform="translate(813 133) rotate(-5 160 173)">
+      <rect width="305" height="345" rx="6" fill="#fff" stroke="#d1d5c8" />
+      <rect x="27" y="27" width="59" height="5" rx="2" fill="#254d3e" />
+      <text x="27" y="68" fill="#254d3e" font-size="10" letter-spacing="3">
+        THE READING ROOM / 01
+      </text>
+      <text
+        x="27"
+        y="114"
+        fill="#242c26"
+        font-size="27"
+        font-family="SimSun,serif"
+        font-weight="700"
+      >
+        内容值得
+      </text>
+      <text
+        x="27"
+        y="153"
+        fill="#242c26"
+        font-size="27"
+        font-family="SimSun,serif"
+        font-weight="700"
+      >
+        被认真阅读
+      </text>
+      <path d="M27 178h250" stroke="#dce0d6" />
+      <g fill="#dce0d6">
+        <rect x="27" y="200" width="245" height="7" rx="3" />
+        <rect x="27" y="219" width="222" height="7" rx="3" />
+        <rect x="27" y="238" width="244" height="7" rx="3" />
+      </g>
+      <rect x="27" y="270" width="251" height="48" rx="4" fill="#eef3e7" />
+      <text x="42" y="300" fill="#254d3e" font-size="14">
+        把表达还给作者，把秩序交给设计。
+      </text>
+    </g>
+    <text x="60" y="594" fill="#62685e" font-size="15">
+      Markdown → Theme → HTML → WeChat
+    </text>
+    <text x="1220" y="594" text-anchor="end" fill="#62685e" font-size="15">
+      清枢定制增强版 · Based on isjiamu/gzh-design-skill
+    </text>
+  </g>
+</svg>
