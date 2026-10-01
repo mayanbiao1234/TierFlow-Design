@@ -1,0 +1,16 @@
+name: Project checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check component libraries
+        run: python3 scripts/component_lint.py .
+      - name: Check website links and gallery samples
+        run: python3 scripts/check_project.py
