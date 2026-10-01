@@ -1,6 +1,6 @@
 # 七套主题预览
 
-[在线主题展厅](https://mayanbiao1234.github.io/gzh-design/#themes)支持七套主题切换与手机／宽屏预览。离线查看时，用浏览器打开 `gallery/index.html`。
+[在线主题展厅](https://mayanbiao1234.github.io/TierFlow-Design/#themes)支持七套主题切换与手机／宽屏预览。离线查看时，用浏览器打开 `gallery/index.html`。
 
 | 主题 | HTML 示例 | 组件库 |
 |---|---|---|

@@ -1,12 +1,12 @@
 <div align="center">
 
-<a href="https://mayanbiao1234.github.io/gzh-design/"><img src="docs/assets/cover.svg" alt="gzh-design — thoughtful layouts for WeChat articles" width="100%"></a>
+<a href="https://mayanbiao1234.github.io/TierFlow-Design/"><img src="docs/assets/cover.svg" alt="TierFlow-Design — thoughtful layouts for WeChat articles" width="100%"></a>
 
-# gzh-design · Qingshu Edition
+# TierFlow-Design
 
 **From Markdown to a better reading experience on WeChat.**
 
-[Live website](https://mayanbiao1234.github.io/gzh-design/) · [Seven-theme gallery](https://mayanbiao1234.github.io/gzh-design/#themes) · [中文](README.md) · [AGPL-3.0](LICENSE)
+[Live website](https://mayanbiao1234.github.io/TierFlow-Design/) · [Seven-theme gallery](https://mayanbiao1234.github.io/TierFlow-Design/#themes) · [中文](README.md) · [AGPL-3.0](LICENSE)
 
 </div>
 
@@ -14,23 +14,30 @@ An AI Agent skill that assembles WeChat article HTML from theme component librar
 
 This is a customized derivative of [isjiamu/gzh-design-skill](https://github.com/isjiamu/gzh-design-skill), originally created by **Jiamu × Moyu Xiaoli**. Upstream attribution, Git history, and the AGPL-3.0 license are preserved.
 
-## Get started
+## Get started — no coding required
 
-Use an Agent that supports Skills, Node.js for the installer, and Python 3 for the validation scripts:
-
-```bash
-npx skills add mayanbiao1234/gzh-design
-```
-
-Choose your target Agent in the installer, then ask:
+Send this single message to an Agent that can install skills, read files and run tools, then attach your article:
 
 ```text
-Format article.md for WeChat using Moyu Green. Validate the HTML, then generate a preview page with a copy button.
+Please install and use the WeChat formatting skill from https://github.com/mayanbiao1234/TierFlow-Design to format the article I send next; choose a suitable theme, preserve the text and images, validate the output, and give me a preview page with a “Copy to WeChat” button.
 ```
 
-For manual setup, clone this repository into a skill location supported by your Agent, preserving the relative paths of `SKILL.md`, `references/`, `scripts/`, and `assets/`.
+Copy the message, send it with your article, then open the generated preview and paste the result into WeChat. After setup, just ask: “Use TierFlow-Design to format this article for WeChat.”
 
-This is an Agent workflow and component library, not a standalone Markdown compiler or hosted editor. The website previews themes; your Agent performs the actual formatting.
+<details>
+<summary>Prefer the terminal? Manual installation</summary>
+
+Requires a Skills-compatible Agent, Node.js for installation, and Python 3 for checks:
+
+```bash
+npx skills add mayanbiao1234/TierFlow-Design
+```
+
+The skill identifier is `tierflow-design`. Manual setup can also clone this repository into a skill location supported by the Agent, keeping the relative paths of `SKILL.md`, `references/`, `scripts/`, and `assets/`.
+
+</details>
+
+The website previews themes; your chosen Agent processes the article. A text-only chatbot may need additional tools. This site has no article-upload endpoint.
 
 ## Seven curated themes
 

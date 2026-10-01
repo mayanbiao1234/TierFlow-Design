@@ -1,4 +1,4 @@
-/* gzh-design · Qingshu edition · AGPL-3.0 */
+/* TierFlow-Design · AGPL-3.0 */
 (() => {
   "use strict";
   const themes = {
@@ -52,23 +52,35 @@
       });
     });
   }
+  let statusTimer;
+  const announceCopy = (message) => {
+    const status = document.getElementById("copy-status");
+    clearTimeout(statusTimer);
+    status.textContent = message;
+    statusTimer = setTimeout(() => {
+      status.textContent = "";
+    }, 6000);
+  };
   document.querySelectorAll("[data-copy]").forEach((button) => {
     button.addEventListener("click", async () => {
       const target = document.getElementById(button.dataset.copy);
-      const status = document.getElementById("copy-status");
       try {
-        await navigator.clipboard.writeText(target.textContent.trim());
-        status.textContent =
+        await navigator.clipboard.writeText(
+          target.textContent.replace(/\s+/g, " ").trim(),
+        );
+        announceCopy(
           button.dataset.copy === "install-command"
             ? "安装命令已复制。"
-            : "提示词已复制。";
+            : "已复制。发给你的智能体，再附上文章即可。",
+        );
       } catch {
+        target.scrollIntoView({ block: "center", behavior: "instant" });
         const range = document.createRange();
         range.selectNodeContents(target);
         const selection = window.getSelection();
         selection.removeAllRanges();
         selection.addRange(range);
-        status.textContent = "已选中文本，请按 Ctrl+C（Mac：⌘C）手动复制。";
+        announceCopy("已选中文本，请按 Ctrl+C（Mac：⌘C）或长按手动复制。");
       }
     });
   });

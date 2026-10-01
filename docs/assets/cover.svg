@@ -3,98 +3,150 @@
   width="1280"
   height="640"
   viewBox="0 0 1280 640"
+  role="img"
+  aria-labelledby="title desc"
 >
-  <rect width="1280" height="640" rx="24" fill="#f6f5ef" />
-  <g fill="none" stroke="#dadcd0">
-    <path d="M60 99h1160M60 552h1160M764 140v372" />
-  </g>
-  <g font-family="Segoe UI,Microsoft YaHei,sans-serif">
-    <text x="60" y="65" fill="#254d3e" font-size="25" font-weight="700">
-      gzh-design
+  <title id="title">TierFlow-Design</title>
+  <desc id="desc">
+    排版交给智能体，表达留给你。7 套公众号主题，一句话开始。
+  </desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#edf2ff" />
+      <stop offset=".5" stop-color="#fafbff" />
+      <stop offset="1" stop-color="#f0eeff" />
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="white" />
+      <stop offset=".6" stop-color="white" stop-opacity=".94" />
+      <stop offset="1" stop-color="white" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#5076bc" stroke-opacity=".065" />
+    </pattern>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)" />
+  <rect width="1280" height="640" fill="url(#grid)" />
+  <rect x="0" y="110" width="30" height="30" fill="#6c87e0" opacity="0.08" />
+  <rect x="128" y="110" width="30" height="30" fill="#6c87e0" opacity="0.06" />
+  <rect x="224" y="142" width="30" height="30" fill="#6c87e0" opacity="0.08" />
+  <rect x="32" y="174" width="30" height="30" fill="#6c87e0" opacity="0.1" />
+  <rect x="96" y="206" width="30" height="30" fill="#6c87e0" opacity="0.08" />
+  <rect x="0" y="238" width="30" height="30" fill="#6c87e0" opacity="0.14" />
+  <rect x="32" y="238" width="30" height="30" fill="#6c87e0" opacity="0.16" />
+  <rect x="64" y="270" width="30" height="30" fill="#6c87e0" opacity="0.12" />
+  <rect x="0" y="302" width="30" height="30" fill="#6c87e0" opacity="0.24" />
+  <rect x="32" y="302" width="30" height="30" fill="#6c87e0" opacity="0.2" />
+  <rect x="64" y="302" width="30" height="30" fill="#6c87e0" opacity="0.18" />
+  <rect x="128" y="334" width="30" height="30" fill="#6c87e0" opacity="0.2" />
+  <rect x="96" y="366" width="30" height="30" fill="#6c87e0" opacity="0.19" />
+  <rect x="32" y="366" width="30" height="30" fill="#6c87e0" opacity="0.29" />
+  <rect x="64" y="398" width="30" height="30" fill="#6c87e0" opacity="0.2" />
+  <rect x="0" y="398" width="30" height="30" fill="#6c87e0" opacity="0.13" />
+  <rect x="32" y="430" width="30" height="30" fill="#6c87e0" opacity="0.15" />
+  <rect x="96" y="462" width="30" height="30" fill="#6c87e0" opacity="0.08" />
+  <rect x="1250" y="110" width="30" height="30" fill="#6c87e0" opacity="0.08" />
+  <rect x="1122" y="110" width="30" height="30" fill="#6c87e0" opacity="0.06" />
+  <rect x="1026" y="142" width="30" height="30" fill="#6c87e0" opacity="0.08" />
+  <rect x="1218" y="174" width="30" height="30" fill="#6c87e0" opacity="0.1" />
+  <rect x="1154" y="206" width="30" height="30" fill="#6c87e0" opacity="0.08" />
+  <rect x="1250" y="238" width="30" height="30" fill="#6c87e0" opacity="0.14" />
+  <rect x="1218" y="238" width="30" height="30" fill="#6c87e0" opacity="0.16" />
+  <rect x="1186" y="270" width="30" height="30" fill="#6c87e0" opacity="0.12" />
+  <rect x="1250" y="302" width="30" height="30" fill="#6c87e0" opacity="0.24" />
+  <rect x="1218" y="302" width="30" height="30" fill="#6c87e0" opacity="0.2" />
+  <rect x="1186" y="302" width="30" height="30" fill="#6c87e0" opacity="0.18" />
+  <rect x="1122" y="334" width="30" height="30" fill="#6c87e0" opacity="0.2" />
+  <rect x="1154" y="366" width="30" height="30" fill="#6c87e0" opacity="0.19" />
+  <rect x="1218" y="366" width="30" height="30" fill="#6c87e0" opacity="0.29" />
+  <rect x="1186" y="398" width="30" height="30" fill="#6c87e0" opacity="0.2" />
+  <rect x="1250" y="398" width="30" height="30" fill="#6c87e0" opacity="0.13" />
+  <rect x="1218" y="430" width="30" height="30" fill="#6c87e0" opacity="0.15" />
+  <rect x="1154" y="462" width="30" height="30" fill="#6c87e0" opacity="0.08" />
+  <ellipse cx="640" cy="280" rx="510" ry="320" fill="url(#glow)" />
+  <g font-family="Inter,Segoe UI,Microsoft YaHei,sans-serif">
+    <g transform="translate(53 33)">
+      <g fill="#3546af">
+        <path d="M6 6h22v8H6zM20 16h8v14h-8zM6 16h8v8H6z" />
+        <path fill="#819af0" d="M6 26h8v6H6zM30 6h4v8h-4z" />
+      </g>
+    </g>
+    <text x="103" y="62" font-size="24" fill="#29327c" font-weight="650">
+      TierFlow
+      <tspan font-weight="400" fill="#5a638b">-Design</tspan>
     </text>
     <text
       x="1220"
-      y="65"
-      fill="#62685e"
-      font-size="15"
+      y="59"
       text-anchor="end"
+      font-size="12"
+      letter-spacing="2"
+      fill="#7183b2"
+    >
+      OPEN SOURCE · WECHAT DESIGN
+    </text>
+    <text
+      x="640"
+      y="154"
+      text-anchor="middle"
+      fill="#6e81b6"
+      font-size="12"
       letter-spacing="3"
     >
-      OPEN SOURCE · AGENT SKILL
+      给智能体一句话，让好内容更好读
     </text>
     <text
-      x="60"
-      y="225"
-      fill="#242c26"
-      font-size="74"
-      font-family="SimSun,serif"
-      font-weight="700"
+      x="640"
+      y="249"
+      text-anchor="middle"
+      fill="#335ce5"
+      font-size="73"
+      font-weight="600"
     >
-      让好内容，
+      排版交给智能体
     </text>
     <text
-      x="60"
-      y="326"
-      fill="#254d3e"
-      font-size="74"
-      font-family="SimSun,serif"
-      font-weight="700"
+      x="640"
+      y="343"
+      text-anchor="middle"
+      fill="#17213a"
+      font-size="73"
+      font-weight="600"
     >
-      有好排版。
+      表达留给你。
     </text>
-    <text x="64" y="389" fill="#62685e" font-size="22">
-      从 Markdown 到微信公众号，把排版交给 Agent。
+    <text x="640" y="397" text-anchor="middle" fill="#68738d" font-size="19">
+      不懂代码，也能把文章排得好看。
     </text>
-    <rect x="60" y="436" width="196" height="43" rx="22" fill="#254d3e" />
-    <text x="158" y="464" text-anchor="middle" fill="#fff" font-size="16">
-      7 套主题 · 无限可能
+    <rect
+      x="508"
+      y="435"
+      width="272"
+      height="48"
+      rx="4"
+      fill="#99b1ff"
+      opacity=".2"
+    />
+    <rect x="504" y="431" width="272" height="48" rx="4" fill="#243eb6" />
+    <text x="640" y="461" text-anchor="middle" font-size="16" fill="white">
+      复制一句话，开始排版 ↗
     </text>
-    <text x="281" y="464" fill="#62685e" font-size="17">AGPL-3.0</text>
-    <g transform="translate(831 151) rotate(5 160 173)">
-      <rect width="305" height="345" rx="6" fill="#e6e8df" stroke="#cdd1c3" />
-    </g>
-    <g transform="translate(813 133) rotate(-5 160 173)">
-      <rect width="305" height="345" rx="6" fill="#fff" stroke="#d1d5c8" />
-      <rect x="27" y="27" width="59" height="5" rx="2" fill="#254d3e" />
-      <text x="27" y="68" fill="#254d3e" font-size="10" letter-spacing="3">
-        THE READING ROOM / 01
-      </text>
-      <text
-        x="27"
-        y="114"
-        fill="#242c26"
-        font-size="27"
-        font-family="SimSun,serif"
-        font-weight="700"
-      >
-        内容值得
-      </text>
-      <text
-        x="27"
-        y="153"
-        fill="#242c26"
-        font-size="27"
-        font-family="SimSun,serif"
-        font-weight="700"
-      >
-        被认真阅读
-      </text>
-      <path d="M27 178h250" stroke="#dce0d6" />
-      <g fill="#dce0d6">
-        <rect x="27" y="200" width="245" height="7" rx="3" />
-        <rect x="27" y="219" width="222" height="7" rx="3" />
-        <rect x="27" y="238" width="244" height="7" rx="3" />
-      </g>
-      <rect x="27" y="270" width="251" height="48" rx="4" fill="#eef3e7" />
-      <text x="42" y="300" fill="#254d3e" font-size="14">
-        把表达还给作者，把秩序交给设计。
+    <path d="M60 524h1160" stroke="#d7e0f3" />
+    <text x="240" y="573" text-anchor="middle" fill="#365bdb" font-size="24">
+      1 句话
+    </text>
+    <text x="640" y="573" text-anchor="middle" fill="#365bdb" font-size="24">
+      7 套主题
+    </text>
+    <text x="1040" y="573" text-anchor="middle" fill="#365bdb" font-size="24">
+      AGPL-3.0
+    </text>
+    <g fill="#8591ab" font-size="11">
+      <text x="240" y="599" text-anchor="middle">发给智能体即可开始</text>
+      <text x="640" y="599" text-anchor="middle">让文章拥有自己的风格</text>
+      <text x="1040" y="599" text-anchor="middle">
+        基于 gzh-design-skill 定制
       </text>
     </g>
-    <text x="60" y="594" fill="#62685e" font-size="15">
-      Markdown → Theme → HTML → WeChat
-    </text>
-    <text x="1220" y="594" text-anchor="end" fill="#62685e" font-size="15">
-      清枢定制增强版 · Based on isjiamu/gzh-design-skill
-    </text>
   </g>
 </svg>

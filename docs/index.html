@@ -3,440 +3,513 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#ffffff" />
     <meta
       name="description"
-      content="gzh-design 清枢定制增强版：7 套公众号排版主题，让 AI Agent 将 Markdown 排成精致 HTML。在线预览主题，一行安装，开源可定制。"
+      content="TierFlow-Design：给智能体一句话，让文章自动排成精美公众号 HTML。无需自己写代码，7 套主题、内容校验、预览与一键复制。"
     />
-    <meta name="theme-color" content="#f6f5ef" />
-    <meta property="og:title" content="gzh-design · 让好内容，有好排版。" />
+    <meta
+      property="og:title"
+      content="TierFlow-Design · 排版交给智能体，表达留给你。"
+    />
     <meta
       property="og:description"
-      content="给 AI Agent 的开源公众号排版技能。7 套主题、主题生成器与 HTML 校验。"
+      content="复制一句话，发给智能体并附上文章，即可开始公众号排版。7 套主题，开源可定制。"
     />
     <meta property="og:type" content="website" />
-    <title>gzh-design · 让好内容，有好排版。</title>
+    <title>TierFlow-Design · 排版交给智能体，表达留给你。</title>
     <link rel="icon" href="assets/brand.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/site.css" />
     <script src="assets/site.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">跳到正文</a>
-    <header class="site-header wrap">
-      <a class="brand" href="./" aria-label="gzh-design 首页"
-        ><img src="assets/brand.svg" width="32" height="32" alt="" /><span
-          >gzh-design<span class="brand-caption">公众号排版技能</span></span
-        ></a
-      >
-      <nav aria-label="主导航">
-        <a href="#themes">主题展厅</a><a href="#workflow">如何使用</a
-        ><a
-          class="nav-github"
-          href="https://github.com/mayanbiao1234/gzh-design"
-          >GitHub ↗</a
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="./" aria-label="TierFlow-Design 首页"
+          ><img src="assets/brand.svg" width="30" height="30" alt="" /><span
+            >TierFlow<span class="brand-design">-Design</span></span
+          ></a
         >
-      </nav>
+        <nav aria-label="主导航">
+          <a href="#start">一句话开始</a><a href="#themes">主题展厅</a
+          ><a class="ecosystem-link" href="https://tierflow.cn/tiersense"
+            >TierSense ↗</a
+          ><a
+            class="nav-github"
+            href="https://github.com/mayanbiao1234/TierFlow-Design"
+            >GitHub ↗</a
+          >
+        </nav>
+      </div>
     </header>
     <main id="main">
-      <section class="hero wrap">
-        <div class="hero-copy">
-          <p class="eyebrow">
-            <span class="status-dot"></span> 为认真写作的人而做
-            <span class="eyebrow-line"></span> OPEN SOURCE
-          </p>
-          <h1>
-            让好内容，<br /><span>有好排版。</span><i aria-hidden="true">✳</i>
-          </h1>
-          <p class="hero-description">
-            文字负责表达，设计负责被读懂。<br />把 Markdown 交给你的 AI
-            Agent，<br />收获一篇有呼吸感的公众号文章。
-          </p>
-          <div class="hero-actions">
-            <a class="button button-dark" href="#install"
-              >把排版交给 Agent <span aria-hidden="true">↗</span></a
-            ><a class="text-link" href="#themes">先看排版效果 ↓</a>
-          </div>
-          <p class="hero-footnote">
-            7 套精选主题 <span>／</span> 按需生成新主题 <span>／</span> AGPL-3.0
-          </p>
-        </div>
-        <div class="hero-art" aria-label="公众号排版示意">
-          <span class="art-label mono">FROM WORDS TO A READING EXPERIENCE</span>
-          <div class="paper-back"></div>
-          <article class="hero-paper">
-            <div class="paper-masthead">
-              <span>THE READING ROOM</span><span>VOL. 01</span>
-            </div>
-            <p class="paper-category">创作手记 · CONTENT & DESIGN</p>
-            <h2>写下的每个字，<br />都值得被认真阅读。</h2>
-            <p class="paper-deck">关于表达、秩序，以及恰到好处的留白。</p>
-            <div class="paper-divider"></div>
-            <h3><span>01</span> 让读者，自然读下去</h3>
-            <p class="paper-body">
-              好的排版，是给文字留出呼吸的空间。让标题成为路标，让重点自然浮现，让每一段思考都有自己的节奏。
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero-copy">
+            <p class="eyebrow hero-eyebrow">
+              <span class="pixel-dot"></span> TIERFLOW-DESIGN ·
+              开源公众号排版技能
             </p>
-            <blockquote>
-              把表达还给作者，<br /><strong>把秩序交给设计。</strong>
-            </blockquote>
-            <div class="paper-bottom">
-              <span>GZH DESIGN</span><span>01 — 07</span>
+            <h1>
+              <span class="hero-title-primary">排版交给智能体</span
+              ><span>表达留给你。</span>
+            </h1>
+            <p class="hero-description">
+              <strong>不懂代码，也能把文章排得好看。</strong
+              >复制一句话，发给你正在使用的智能体，再附上文章。<br />从选择主题到生成预览，让它帮你完成。
+            </p>
+            <div class="hero-actions">
+              <button
+                class="button primary"
+                type="button"
+                data-copy="starter-prompt"
+              >
+                复制一句话，开始排版 <span aria-hidden="true">↗</span></button
+              ><a class="button secondary" href="#themes"
+                >先看排版效果 <span aria-hidden="true">→</span></a
+              >
             </div>
-          </article>
-          <div class="art-note">
-            <span aria-hidden="true">✦</span> 你的文字，自有风格。
+            <p class="hero-note">适用于支持技能安装与文件处理的智能体</p>
           </div>
-          <span class="art-caption mono"
-            >MARKDOWN IN. BEAUTIFUL READING OUT.</span
-          >
+          <div class="evidence">
+            <div class="evidence-source">
+              <strong>TierFlow-Design</strong><span>让创作回到内容本身</span>
+            </div>
+            <dl class="service-metrics">
+              <div>
+                <dt>复制给智能体即可开始</dt>
+                <dd>1<span>句话</span></dd>
+              </div>
+              <div>
+                <dt>适配不同文章与表达</dt>
+                <dd>7<span>套主题</span></dd>
+              </div>
+              <div>
+                <dt>开放源码，自由探索</dt>
+                <dd>AGPL<span>3.0</span></dd>
+              </div>
+            </dl>
+          </div>
         </div>
       </section>
-      <div class="compatibility wrap">
-        <span>融入你的创作工具</span>
-        <p>
-          Claude Code <i>·</i> Codex <i>·</i> Cursor <i>·</i> 其他支持 Skills 的
-          Agent
-        </p>
-        <span class="mono">ONE SKILL. YOUR WORKFLOW.</span>
-      </div>
-      <section id="themes" class="section wrap">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">01 / THE THEME LIBRARY</p>
-            <h2>同样的文字，不同的气质。</h2>
-          </div>
-          <p>
-            为每一次表达，找到合适的阅读氛围。<br />切换主题，浏览真实 HTML
-            示例。
-          </p>
+      <nav class="section-nav" aria-label="页面章节">
+        <div class="wrap">
+          <a href="#start"><span>01</span> 一句话开始</a
+          ><a href="#themes"><span>02</span> 主题展厅</a
+          ><a href="#workflow"><span>03</span> 如何完成排版</a
+          ><a href="#faq"><span>04</span> 常见问题</a>
         </div>
-        <div class="theme-explorer" data-gallery-base="gallery/">
-          <div class="theme-sidebar">
-            <div class="theme-list" role="group" aria-label="选择排版主题">
-              <button
-                class="theme-option"
-                type="button"
-                data-theme="moyu-green"
-                aria-pressed="false"
-              >
-                <span class="theme-number">01</span
-                ><span class="theme-swatch" style="--swatch: #059669"></span
-                ><span>摸鱼绿<small>鲜活 · 清晰 · 高信息密度</small></span
-                ><span class="theme-badge">默认</span></button
-              ><button
-                class="theme-option"
-                type="button"
-                data-theme="red-white"
-                aria-pressed="false"
-              >
-                <span class="theme-number">02</span
-                ><span class="theme-swatch" style="--swatch: #dc2626"></span
-                ><span
-                  >红白色系<small>鲜明 · 有力 · 经典编辑风</small></span
-                ></button
-              ><button
-                class="theme-option"
-                type="button"
-                data-theme="graphite-minimal"
-                aria-pressed="false"
-              >
-                <span class="theme-number">03</span
-                ><span class="theme-swatch" style="--swatch: #52525b"></span
-                ><span
-                  >石墨极简<small>冷静 · 克制 · 专业观点</small></span
-                ></button
-              ><button
-                class="theme-option"
-                type="button"
-                data-theme="zen-whitespace"
-                aria-pressed="false"
-              >
-                <span class="theme-number">04</span
-                ><span class="theme-swatch" style="--swatch: #4a5d52"></span
-                ><span
-                  >留白禅意<small>舒展 · 安静 · 深度随笔</small></span
-                ></button
-              ><button
-                class="theme-option"
-                type="button"
-                data-theme="moyu-ticket"
-                aria-pressed="false"
-              >
-                <span class="theme-number">05</span
-                ><span class="theme-swatch" style="--swatch: #059669"></span
-                ><span
-                  >摸鱼票据<small>有趣 · 轻盈 · 创意评测</small></span
-                ></button
-              ><button
-                class="theme-option"
-                type="button"
-                data-theme="olive-journal"
-                aria-pressed="false"
-              >
-                <span class="theme-number">06</span
-                ><span class="theme-swatch" style="--swatch: #ed7b2f"></span
-                ><span
-                  >橄榄手记<small>温暖 · 耐读 · 编辑部内刊</small></span
-                ></button
-              ><button
-                class="theme-option"
-                type="button"
-                data-theme="elegant-white"
-                aria-pressed="true"
-              >
-                <span class="theme-number">07</span
-                ><span class="theme-swatch" style="--swatch: #b08d4c"></span
-                ><span>极简优雅白<small>优雅 · 留白 · 深度分析</small></span
-                ><span class="theme-badge">新增</span>
-              </button>
+      </nav>
+      <section id="start" class="section start-section">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow"><span>01</span> 给每一个内容创作者</p>
+              <h2>会发消息，就会用。</h2>
             </div>
-            <div class="theme-custom">
-              <span aria-hidden="true">✳</span>
-              <div>
-                <b>你的风格，不止这七种。</b>
-                <p>一句描述或一张参考图，<br />让 Agent 为你生成专属主题。</p>
+            <p>
+              不需要理解 HTML，也不用自己敲命令。<br />把这句话连同文章发过去，剩下的交给智能体。
+            </p>
+          </div>
+          <div class="starter">
+            <div class="starter-guide">
+              <p class="panel-label">你只需要做三件事</p>
+              <ol class="simple-steps">
+                <li>
+                  <span>1</span>
+                  <div>
+                    <h3>复制这句话</h3>
+                    <p>里面已包含技能地址和排版要求。</p>
+                  </div>
+                </li>
+                <li>
+                  <span>2</span>
+                  <div>
+                    <h3>发给智能体，附上文章</h3>
+                    <p>
+                      粘贴文字或上传文章文件都可以。<br />它会按内容选主题，你也可以指定喜欢的风格。
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <span>3</span>
+                  <div>
+                    <h3>打开预览，复制到公众号</h3>
+                    <p>
+                      看到生成的预览页后，点击「复制到公众号」，<br />在公众号编辑器粘贴并检查即可。
+                    </p>
+                  </div>
+                </li>
+              </ol>
+              <p class="agent-note">
+                例如使用你已配置好的 Codex、Claude Code、Cursor 或
+                WorkBuddy。智能体需要支持读取仓库、处理文件与运行技能。
+              </p>
+            </div>
+            <div class="starter-message">
+              <div class="message-toolbar">
+                <span><span class="message-dot"></span> 发给你的智能体</span
+                ><span class="ready-tag">可直接复制</span>
               </div>
+              <div class="message-body">
+                <p id="starter-prompt">
+                  请安装并使用 https://github.com/mayanbiao1234/TierFlow-Design
+                  的公众号排版技能，将我接下来发给你的文章自动排版为适合微信公众号的精美
+                  HTML；按内容选择主题，保留原文和图片，完成校验后给我带「复制到公众号」按钮的预览页。
+                </p>
+                <div class="attachment-demo">
+                  <span aria-hidden="true">＋</span> 再附上你的文章
+                  <span class="attachment-hint">文字或文件</span>
+                </div>
+              </div>
+              <div class="message-bottom">
+                <span>第一次使用也可以直接发送</span
+                ><button
+                  class="button primary"
+                  type="button"
+                  data-copy="starter-prompt"
+                >
+                  复制这句话 <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+              <p class="message-followup">
+                装好以后，每次只要说：<br /><span
+                  >「用 TierFlow-Design 帮我排版这篇公众号文章。」</span
+                >
+              </p>
             </div>
           </div>
-          <div class="theme-stage">
-            <div class="preview-toolbar">
-              <span class="mono"
-                >LIVE HTML PREVIEW <span class="preview-dot"></span
-              ></span>
-              <div class="viewport-switch" role="group" aria-label="预览宽度">
-                <button type="button" data-width="mobile" aria-pressed="true">
-                  手机</button
-                ><button type="button" data-width="wide" aria-pressed="false">
-                  宽屏
+          <details class="advanced-install" id="install">
+            <summary>
+              <span>习惯命令行？手动安装入口</span
+              ><span class="details-plus" aria-hidden="true">＋</span>
+            </summary>
+            <div class="advanced-content">
+              <p>
+                在支持 Skills 的智能体环境中运行；安装器使用
+                Node.js，校验脚本使用 Python 3。
+              </p>
+              <div class="install-command">
+                <code id="install-command"
+                  >npx skills add mayanbiao1234/TierFlow-Design</code
+                ><button
+                  class="copy-button"
+                  type="button"
+                  data-copy="install-command"
+                >
+                  复制命令
                 </button>
               </div>
             </div>
-            <div class="preview-canvas">
-              <div class="preview-frame">
-                <iframe
-                  id="theme-preview"
-                  src="gallery/elegant-white.html"
-                  title="极简优雅白主题排版示例"
-                  loading="lazy"
-                  sandbox="allow-same-origin"
-                ></iframe>
-              </div>
-            </div>
-            <div class="preview-footer">
-              <div>
-                <b id="preview-name">极简优雅白</b
-                ><span id="preview-description"
-                  >墨黑与香槟金，让深度内容沉静下来。</span
-                >
-              </div>
-              <a
-                id="preview-link"
-                href="gallery/elegant-white.html"
-                target="_blank"
-                rel="noopener"
-                >完整示例 ↗</a
-              >
-            </div>
-            <p
-              class="sr-only"
-              id="preview-status"
-              role="status"
-              aria-live="polite"
-            ></p>
-          </div>
+          </details>
         </div>
-        <p class="section-note">
-          展厅使用随项目保留的示例文章，展示各主题的组件风格；生成时会按你的文章结构和主题配方重新装配。摸鱼绿示例保留上游版式，当前默认规则见主题文档。
-        </p>
-        <noscript
-          ><p>
-            启用 JavaScript 可切换预览。也可直接浏览：<a
-              href="gallery/moyu-green.html"
-              >摸鱼绿</a
-            >
-            · <a href="gallery/red-white.html">红白色系</a> ·
-            <a href="gallery/graphite-minimal.html">石墨极简</a> ·
-            <a href="gallery/zen-whitespace.html">留白禅意</a> ·
-            <a href="gallery/moyu-ticket.html">摸鱼票据</a> ·
-            <a href="gallery/olive-journal.html">橄榄手记</a> ·
-            <a href="gallery/elegant-white.html">极简优雅白</a>
-          </p></noscript
-        >
       </section>
-      <section id="workflow" class="workflow-band">
-        <div class="wrap section">
+      <section id="themes" class="section themes-section">
+        <div class="wrap">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">02 / LESS FORMATTING, MORE WRITING</p>
-              <h2>从写完，到发出。<br />让创作再轻一点。</h2>
+              <p class="eyebrow"><span>02</span> 七套主题，七种表达</p>
+              <h2>同样的文字，<br />找到合适的阅读气质。</h2>
             </div>
             <p>
-              保留你习惯的写作方式。<br />把调整字号、间距和颜色的时间，还给内容。
+              清晰的教程、克制的分析、舒展的随笔。<br />选择一种风格，看看真实文章的排版效果。
+            </p>
+          </div>
+          <div class="theme-explorer" data-gallery-base="gallery/">
+            <div class="theme-sidebar">
+              <div class="theme-list" role="group" aria-label="选择排版主题">
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="moyu-green"
+                  aria-pressed="false"
+                >
+                  <span class="theme-number">01</span
+                  ><span class="theme-swatch" style="--swatch: #059669"></span
+                  ><span>摸鱼绿<small>教程 / 测评 / 工具盘点</small></span
+                  ><span class="theme-badge">默认</span></button
+                ><button
+                  class="theme-option"
+                  type="button"
+                  data-theme="red-white"
+                  aria-pressed="false"
+                >
+                  <span class="theme-number">02</span
+                  ><span class="theme-swatch" style="--swatch: #dc2626"></span
+                  ><span>红白色系<small>观点 / 深度分析</small></span></button
+                ><button
+                  class="theme-option"
+                  type="button"
+                  data-theme="graphite-minimal"
+                  aria-pressed="false"
+                >
+                  <span class="theme-number">03</span
+                  ><span class="theme-swatch" style="--swatch: #52525b"></span
+                  ><span
+                    >石墨极简<small>科技 / 设计 / 专业观点</small></span
+                  ></button
+                ><button
+                  class="theme-option"
+                  type="button"
+                  data-theme="zen-whitespace"
+                  aria-pressed="false"
+                >
+                  <span class="theme-number">04</span
+                  ><span class="theme-swatch" style="--swatch: #4a5d52"></span
+                  ><span
+                    >留白禅意<small>生活 / 随笔 / 极简表达</small></span
+                  ></button
+                ><button
+                  class="theme-option"
+                  type="button"
+                  data-theme="moyu-ticket"
+                  aria-pressed="false"
+                >
+                  <span class="theme-number">05</span
+                  ><span class="theme-swatch" style="--swatch: #059669"></span
+                  ><span
+                    >摸鱼票据<small>工具对比 / 创意评测</small></span
+                  ></button
+                ><button
+                  class="theme-option"
+                  type="button"
+                  data-theme="olive-journal"
+                  aria-pressed="false"
+                >
+                  <span class="theme-number">06</span
+                  ><span class="theme-swatch" style="--swatch: #ed7b2f"></span
+                  ><span
+                    >橄榄手记<small>编辑手记 / 案例复盘</small></span
+                  ></button
+                ><button
+                  class="theme-option"
+                  type="button"
+                  data-theme="elegant-white"
+                  aria-pressed="true"
+                >
+                  <span class="theme-number">07</span
+                  ><span class="theme-swatch" style="--swatch: #b08d4c"></span
+                  ><span>极简优雅白<small>深度分析 / 数据复盘</small></span
+                  ><span class="theme-badge">新增</span>
+                </button>
+              </div>
+              <div class="theme-custom">
+                <span aria-hidden="true">＋</span>
+                <div>
+                  <b>也可以，定义自己的风格。</b>
+                  <p>一句描述或一张参考图，<br />让智能体生成专属主题。</p>
+                </div>
+              </div>
+            </div>
+            <div class="theme-stage">
+              <div class="preview-toolbar">
+                <span>排版效果预览 <span class="preview-dot"></span></span>
+                <div class="viewport-switch" role="group" aria-label="预览宽度">
+                  <button type="button" data-width="mobile" aria-pressed="true">
+                    手机</button
+                  ><button type="button" data-width="wide" aria-pressed="false">
+                    宽屏
+                  </button>
+                </div>
+              </div>
+              <div class="preview-canvas">
+                <div class="preview-frame">
+                  <iframe
+                    id="theme-preview"
+                    src="gallery/elegant-white.html"
+                    title="极简优雅白主题排版示例"
+                    loading="lazy"
+                    sandbox="allow-same-origin"
+                  ></iframe>
+                </div>
+              </div>
+              <div class="preview-footer">
+                <div>
+                  <b id="preview-name">极简优雅白</b
+                  ><span id="preview-description"
+                    >墨黑与香槟金，让深度内容沉静下来。</span
+                  >
+                </div>
+                <a
+                  id="preview-link"
+                  href="gallery/elegant-white.html"
+                  target="_blank"
+                  rel="noopener"
+                  >完整示例 ↗</a
+                >
+              </div>
+              <p
+                class="sr-only"
+                id="preview-status"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </div>
+          </div>
+          <p class="section-note">
+            这里展示项目保留的示例文章。实际生成会按你的文章重新装配；摸鱼绿示例保留上游版式，当前默认规则以主题文档为准。
+          </p>
+          <noscript
+            ><p>
+              启用 JavaScript 可切换预览，也可以直接查看：<a
+                href="gallery/moyu-green.html"
+                >摸鱼绿</a
+              >
+              · <a href="gallery/red-white.html">红白色系</a> ·
+              <a href="gallery/graphite-minimal.html">石墨极简</a> ·
+              <a href="gallery/zen-whitespace.html">留白禅意</a> ·
+              <a href="gallery/moyu-ticket.html">摸鱼票据</a> ·
+              <a href="gallery/olive-journal.html">橄榄手记</a> ·
+              <a href="gallery/elegant-white.html">极简优雅白</a>
+            </p></noscript
+          >
+        </div>
+      </section>
+      <section id="workflow" class="section workflow-section">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow"><span>03</span> 一句话背后，认真完成每一步</p>
+              <h2>从一篇稿件，<br />到可复制的排版成稿。</h2>
+            </div>
+            <p>
+              你专注写作，智能体负责组织页面。<br />每一步都有组件和检查规则可循。
             </p>
           </div>
           <div class="workflow-grid">
             <article>
               <span class="step-number">01</span>
-              <h3>交给 Agent</h3>
-              <p>
-                提供 Markdown 或文章文本，选一个喜欢的主题，也可以让 Agent
-                按题材推荐。
-              </p>
-              <span class="step-label mono">YOUR WORDS</span>
+              <h3>读懂文章结构</h3>
+              <p>识别标题、段落、引用、代码与图片，按内容推荐主题。</p>
+              <span class="step-tag">文章 → 结构</span>
             </article>
             <article>
               <span class="step-number">02</span>
-              <h3>排版与校验</h3>
-              <p>
-                按组件库装配标题、引用和重点，再运行 HTML
-                校验，检查平台限制与标点。
-              </p>
-              <span class="step-label mono">A LITTLE STRUCTURE</span>
+              <h3>装配主题组件</h3>
+              <p>组织章节层次、突出关键词，安排好间距、颜色与阅读节奏。</p>
+              <span class="step-tag">结构 → 排版</span>
             </article>
             <article>
               <span class="step-number">03</span>
-              <h3>复制，准备发布</h3>
-              <p>
-                打开生成的预览页，点击「复制到公众号」，粘贴到编辑器后检查最终效果。
-              </p>
-              <span class="step-label mono">READY TO READ</span>
+              <h3>检查内容与格式</h3>
+              <p>检查微信兼容规则和标点，修复引号时核对内容保留。</p>
+              <span class="step-tag">排版 → 校验</span>
+            </article>
+            <article>
+              <span class="step-number">04</span>
+              <h3>交付复制预览</h3>
+              <p>生成文章 HTML 和预览页，复制到公众号后检查最终效果。</p>
+              <span class="step-tag">预览 → 发布</span>
             </article>
           </div>
         </div>
       </section>
-      <section class="section wrap enhancements">
-        <div>
-          <p class="eyebrow">03 / THE QINGSHU EDITION</p>
-          <h2>好看之外，<br />多一点认真。</h2>
-          <p class="enhancement-intro">
-            在上游优秀组件库的基础上，<br />把实际创作中的细节继续打磨。
-          </p>
-          <a
-            class="text-link"
-            href="https://github.com/mayanbiao1234/gzh-design#本版增加了什么"
-            >了解定制增强内容 ↗</a
-          >
-        </div>
-        <div class="enhancement-list">
-          <article>
-            <span>01</span>
-            <div>
-              <h3>一套新的安静表达</h3>
+      <section id="faq" class="section faq-section">
+        <div class="wrap faq-layout">
+          <div>
+            <p class="eyebrow"><span>04</span> 开始之前，你可能想知道</p>
+            <h2>把复杂留给工具，<br />把答案说简单。</h2>
+            <p class="faq-lead">
+              想看它如何工作？<br /><a
+                href="https://github.com/mayanbiao1234/TierFlow-Design/blob/main/SKILL.md"
+                >阅读完整技能说明 ↗</a
+              >
+            </p>
+          </div>
+          <div class="faq-list">
+            <details open>
+              <summary>完全不懂代码，也能用吗？<span>＋</span></summary>
               <p>
-                极简优雅白：衬线标题、香槟金点缀与三线表，为分析和复盘留出空间。
+                可以。复制上面那句话，发给支持技能安装和文件处理的智能体，并附上文章即可。安装、选择主题、排版和校验由智能体执行；你负责检查生成的内容和最终粘贴效果。
               </p>
-            </div>
-          </article>
-          <article>
-            <span>02</span>
-            <div>
-              <h3>一个字，也值得被保留</h3>
+            </details>
+            <details>
+              <summary>任意聊天机器人都可以吗？<span>＋</span></summary>
               <p>
-                引号修复脚本自带内容保留检查，帮助发现批量替换时的文字丢失。
+                需要能够读取仓库、处理文件并运行技能的智能体。只支持文字对话的聊天工具，可能无法直接安装技能或生成可用文件。网站本身用于介绍和预览，实际排版在你的智能体里完成。
               </p>
-            </div>
-          </article>
-          <article>
-            <span>03</span>
-            <div>
-              <h3>经过打磨的摸鱼绿</h3>
+            </details>
+            <details>
+              <summary>我只有 Word 或一段文字，怎么办？<span>＋</span></summary>
               <p>
-                无框居中封面、去目录、正文零侧边距，让长篇文章读起来更连贯。
+                直接发给智能体。纯文本、Word 和 PDF
+                会先提取为文章结构，再进行排版；文件提取取决于你所用智能体的能力。扫描版
+                PDF 或复杂表格可能需要补充核对。
               </p>
-            </div>
-          </article>
-          <article>
-            <span>04</span>
-            <div>
-              <h3>把经验写进工作流</h3>
+            </details>
+            <details>
+              <summary>能指定主题，或做自己的风格吗？<span>＋</span></summary>
               <p>
-                变换脚本落盘、变换后检查内容、抽读实际句子，明确每一步交付纪律。
+                可以。在提示词里加上「使用极简优雅白」等主题名称，或给一段风格描述、一张参考图，让智能体生成并保存新的主题组件库。
               </p>
-            </div>
-          </article>
+            </details>
+            <details>
+              <summary>文章会上传到这个网站吗？<span>＋</span></summary>
+              <p>
+                这个展示网站没有文章上传入口，也不接收你的稿件。文章由你选择的智能体处理，处理方式与数据规则以该智能体服务为准。
+              </p>
+            </details>
+          </div>
         </div>
       </section>
-      <section id="install" class="wrap install-section">
-        <div class="install-panel">
+      <section class="closing">
+        <div class="wrap closing-inner">
           <div>
-            <p class="eyebrow">A SMALL SKILL. A BETTER READING EXPERIENCE.</p>
-            <h2>下一篇，<br />从好排版开始。</h2>
-            <p>安装技能，再把你的文章交给 Agent。</p>
+            <p class="eyebrow">TIERFLOW-DESIGN</p>
+            <h2>下一篇，把排版交给智能体。</h2>
+            <p>从复制一句话开始，让你的好内容更好读。</p>
           </div>
-          <div class="install-right">
-            <div class="terminal-header">
-              <span class="mono">01 / INSTALL</span
-              ><span class="mono">TERMINAL</span>
-            </div>
-            <div class="install-command">
-              <code id="install-command"
-                >npx skills add mayanbiao1234/gzh-design</code
-              ><button
-                type="button"
-                class="copy-button"
-                data-copy="install-command"
-                aria-label="复制安装命令"
-              >
-                复制 ⧉
-              </button>
-            </div>
-            <p class="install-help">
-              需要 Node.js 与支持 Skills 的 Agent。安装器会提示选择目标工具。
-            </p>
-            <div class="terminal-header">
-              <span class="mono">02 / JUST ASK</span
-              ><button
-                type="button"
-                class="copy-prompt"
-                data-copy="example-prompt"
-              >
-                复制提示词 ↗
-              </button>
-            </div>
-            <p class="example-prompt" id="example-prompt">
-              用摸鱼绿把 article.md 排成公众号
-              HTML，完成校验后生成带复制按钮的预览页。
-            </p>
-            <p
-              class="copy-status"
-              id="copy-status"
-              role="status"
-              aria-live="polite"
-            ></p>
-          </div>
+          <button
+            class="button primary"
+            type="button"
+            data-copy="starter-prompt"
+          >
+            复制一句话，开始使用 ↗
+          </button>
         </div>
       </section>
       <section class="open-source wrap">
-        <span class="open-symbol" aria-hidden="true">↗</span>
         <div>
-          <h2>从开源而来，继续开放。</h2>
+          <h3>从开源而来，继续开放。</h3>
           <p>
-            本项目是
+            基于
             <a href="https://github.com/isjiamu/gzh-design-skill"
               >isjiamu/gzh-design-skill</a
-            >
-            的定制增强版，<br />感谢甲木 × 摸鱼小李的原始设计与组件库。按
-            AGPL-3.0 协议发布。
+            >，感谢甲木 × 摸鱼小李。<br />保留上游历史与署名，按 AGPL-3.0
+            协议发布。
           </p>
         </div>
         <a
-          class="button button-outline"
-          href="https://github.com/mayanbiao1234/gzh-design"
+          class="text-link"
+          href="https://github.com/mayanbiao1234/TierFlow-Design"
           >在 GitHub 一起完善 ↗</a
         >
       </section>
     </main>
     <footer class="site-footer wrap">
-      <span
-        ><b>gzh-design</b>
-        <span class="footer-caption">清枢定制增强版</span></span
-      ><span>让写作回到内容本身。</span>
+      <a class="brand" href="./"
+        ><img src="assets/brand.svg" alt="" width="24" height="24" /><span
+          >TierFlow<span class="brand-design">-Design</span></span
+        ></a
+      ><span>公众号排版，交给智能体。</span>
       <div>
-        <a href="https://github.com/mayanbiao1234/gzh-design/blob/main/LICENSE"
+        <a href="https://tierflow.cn">TierFlow ↗</a
+        ><a
+          href="https://github.com/mayanbiao1234/TierFlow-Design/blob/main/LICENSE"
           >AGPL-3.0</a
         ><a
-          href="https://github.com/mayanbiao1234/gzh-design/blob/main/CONTRIBUTING.md"
+          href="https://github.com/mayanbiao1234/TierFlow-Design/blob/main/CONTRIBUTING.md"
           >参与贡献 ↗</a
         >
       </div>
     </footer>
+    <div
+      id="copy-status"
+      class="copy-status"
+      role="status"
+      aria-live="polite"
+    ></div>
   </body>
 </html>
